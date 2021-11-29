@@ -6,7 +6,8 @@
         "salary": "10000",
         "phone": "78451245",
         "address": "San Salvador",
-        "dui": "04568983-4"
+        "dui": "04568983-4",
+        "date": "29-11-2021"
     },
     {
         "name": "Tito",
@@ -15,7 +16,8 @@
         "salary": "1500",
         "phone": "61511478",
         "address": "San Vicente",
-        "dui": "04812589-8"
+        "dui": "04812589-8",
+        "date": "29-11-2021"
     },
     {
         "name": "Mario",
@@ -24,16 +26,8 @@
         "salary": "4000",
         "phone": "78451245",
         "address": "San Salvador",
-        "dui": "04812583-5"
-    },
-    {
-        "name": "Luna",
-        "last_name": "Maria",
-        "email": "marialuna@gmail.com",
-        "salary": "5000",
-        "phone": "78451256",
-        "address": "San Bartolo",
-        "dui": "02312583-4"
+        "dui": "04812583-5",
+        "date": "29-11-2021"
     },
     {
         "name": "Tito",
@@ -42,7 +36,8 @@
         "salary": "784",
         "phone": "45785689",
         "address": "San benito",
-        "dui": "56892583-4"
+        "dui": "56892583-4",
+        "date": "29-11-2021"
     },
     {
         "name": "Andres",
@@ -51,6 +46,7 @@
         "salary": "780",
         "phone": "78543267",
         "address": "San Miguel",
-        "dui": "01784512-9"
+        "dui": "01784512-9",
+        "date": "29-11-2021"
     }
 ]
