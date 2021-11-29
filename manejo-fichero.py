@@ -78,6 +78,49 @@ def delete_person():
     os.system('pause')
 
 
+def update_person():
+    os.system('cls')
+    update = ""
+
+    dui_person = input('Ingrese el DUI de la persona a modificar: ')
+    for i in persons:
+        if dui_person == i['dui']:
+            update = input('¿Desea modificar dato? (si/no): ')
+            if update == 'si':
+                name =  input('Ingrese nombre: ')
+                i['name'] =  name if name != "" else i['name']
+                last_name = input('Ingrese apellido: ')
+                i['last_name'] = last_name if last_name != "" else i['last_name']
+                email = input('Ingrese nuevoa dirección de correo: ')
+                i['email'] = email if email != "" else i['email']
+                salary = input('Ingrese valor de salario: ')
+                i['salary'] = salary if salary != "" else i['salary']
+                phone = input('Ingrese numero de telefono: ')
+                i['phone'] = phone if phone != "" else i['phone']
+                address = input('Ingrese nueva dirección: ')
+                i['address'] = address if address != "" else i['address']
+
+
+def show_person():
+    os.system('cls')
+    dui = input("Ingrese el numero de DUI: ")
+    for person in persons:
+        if person['dui'] == dui:
+            print('---- Información ----')
+            print('Nombre: ', person['name'])
+            print('Apellido: ', person['last_name'])
+            print('Correo: ', person['email'])
+            print('Salario: ', person['salary'])
+            print('Phone: ', person['phone'])
+            print('Dirección: ', person['address'])
+            print('dui: ', person['dui'])
+            print('Fecha de ingreso: ', person['date'])
+            os.system('pause')
+            return
+    print('Persona no encontrada.')
+    os.system('pause')
+
+
 op = ''
 
 # Load content to persons list
@@ -89,6 +132,8 @@ while(op != 'exit'):
     print('(1)..... Listar personas')
     print('(2)..... Agregar personas')
     print('(3)..... Eliminar persona')
+    print('(4)..... Modificar persona')
+    print('(5)..... Mostrar persona')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -99,6 +144,10 @@ while(op != 'exit'):
         add_person()
     elif op == '3':
         delete_person()
+    elif op == '4':
+        update_person()
+    elif op == '5':
+        show_person()
     elif op == 'exit':
         print('Fin del programa')
     else:
