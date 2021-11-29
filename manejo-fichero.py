@@ -1,5 +1,6 @@
 import os
 import json
+import datetime
 
 persons = []
 file_name = 'base-personas.txt'
@@ -121,6 +122,15 @@ def show_person():
     os.system('pause')
 
 
+def update_date():
+    date_now = datetime.datetime.now()
+    for person in persons:
+        person['date'] = date_now.strftime("%d-%m-%Y")
+    write_to_file()
+    print('Fechas Actualizadas')
+    os.system('pause')
+
+
 op = ''
 
 # Load content to persons list
@@ -134,6 +144,7 @@ while(op != 'exit'):
     print('(3)..... Eliminar persona')
     print('(4)..... Modificar persona')
     print('(5)..... Mostrar persona')
+    print('(6)..... Actualizar fechas')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -148,6 +159,8 @@ while(op != 'exit'):
         update_person()
     elif op == '5':
         show_person()
+    elif op == '6':
+        update_date()
     elif op == 'exit':
         print('Fin del programa')
     else:
